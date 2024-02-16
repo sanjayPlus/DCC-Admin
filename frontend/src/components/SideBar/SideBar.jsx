@@ -160,6 +160,18 @@ function SideBar() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link to="/add-videogallery" className="nav-link">
+              <i className="link-icon" data-feather="box" />
+              <span className="link-title">Add Video Gallery</span>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/all-videogallery" className="nav-link">
+              <i className="link-icon" data-feather="box" />
+              <span className="link-title">All Video Gallery</span>
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link to="/add-district" className="nav-link">
               <i className="link-icon" data-feather="box" />
               <span className="link-title">Add District</span>

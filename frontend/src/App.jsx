@@ -34,6 +34,8 @@ import AddPanchayath from "./components/AddPanchayath/AddPanchayath"
 import AddMunicipality from "./components/AddMunicipality/AddMunicipality"
 import AddCorporation from "./components/AddCorporation/AddCorporation"
 import AllNotification from "./components/AllNotification/AllNotification"
+import AddVideoGallery from "./components/AddVideoGallery/AddVideoGallery"
+import AllVideoGallery from "./components/AllVideoGalley/AllVideoGallery"
 
 function App() {
 
@@ -72,6 +74,8 @@ function App() {
     <Route path="/add-panchayath" element={<AddPanchayath/>} />
     <Route path="/add-municipality" element={<AddMunicipality/>} />
     <Route path="/add-corporation" element={<AddCorporation/>} />
+    <Route path="/add-videogallery" element={<AddVideoGallery/>} />
+    <Route path="/all-videogallery" element={<AllVideoGallery/>} />
   
 
 
