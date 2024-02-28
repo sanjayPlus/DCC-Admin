@@ -23,7 +23,7 @@ function AllReels() {
       .then((res) => {
         if (res.status === 200) {
           axios
-            .get(`${SERVER_URL}/user/reels`, {
+            .get(`${SERVER_URL}/admin/reels`, {
               headers: { "x-access-token": token },
             })
             .then((userResponse) => {

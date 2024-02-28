@@ -23,7 +23,7 @@ function AllMeme() {
       .then((res) => {
         if (res.status === 200) {
           axios
-            .get(`${SERVER_URL}/user/meme`, {
+            .get(`${SERVER_URL}/admin/meme`, {
               headers: { "x-access-token": token },
             })
             .then((userResponse) => {
