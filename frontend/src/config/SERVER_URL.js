@@ -2,6 +2,7 @@
 
 
 const SERVER_URL = "https://dccbackend.plusitpark.com/api"
+// const SERVER_URL = "https://intuc1.onrender.com/api"
 
 
 export default SERVER_URL;

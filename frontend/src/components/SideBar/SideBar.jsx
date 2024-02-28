@@ -208,6 +208,34 @@ function SideBar() {
             </Link>
           </li>
        
+          <li className="nav-item">
+            <Link to="/add-meme" className="nav-link">
+              <i className="link-icon" data-feather="box" />
+              <span className="link-title">Add Meme</span>
+            </Link>
+          </li>
+       
+          <li className="nav-item">
+            <Link to="/all-meme" className="nav-link">
+              <i className="link-icon" data-feather="box" />
+              <span className="link-title">All Meme</span>
+            </Link>
+          </li>
+       
+          <li className="nav-item">
+            <Link to="/add-reels" className="nav-link">
+              <i className="link-icon" data-feather="box" />
+              <span className="link-title">Add Reels</span>
+            </Link>
+          </li>
+       
+          <li className="nav-item">
+            <Link to="/all-reels" className="nav-link">
+              <i className="link-icon" data-feather="box" />
+              <span className="link-title">All Reels</span>
+            </Link>
+          </li>
+       
     
         </ul>
       </div>

@@ -36,6 +36,10 @@ import AddCorporation from "./components/AddCorporation/AddCorporation"
 import AllNotification from "./components/AllNotification/AllNotification"
 import AddVideoGallery from "./components/AddVideoGallery/AddVideoGallery"
 import AllVideoGallery from "./components/AllVideoGalley/AllVideoGallery"
+import AddMeme from "./components/AddMeme/AddMeme"
+import AllMeme from "./components/AllMeme/AllMeme"
+import AddReels from "./components/AddReels/AddReels"
+import AllReels from "./components/AllReels/AllReels"
 
 function App() {
 
@@ -75,7 +79,10 @@ function App() {
     <Route path="/add-municipality" element={<AddMunicipality/>} />
     <Route path="/add-corporation" element={<AddCorporation/>} />
     <Route path="/add-videogallery" element={<AddVideoGallery/>} />
-    <Route path="/all-videogallery" element={<AllVideoGallery/>} />
+    <Route path="/add-meme" element={<AddMeme/>} />
+    <Route path="/all-meme" element={<AllMeme/>} />
+    <Route path="/add-reels" element={<AddReels/>} />
+    <Route path="/all-reels" element={<AllReels/>} />
   
 
 
