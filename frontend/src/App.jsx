@@ -79,6 +79,7 @@ function App() {
     <Route path="/add-municipality" element={<AddMunicipality/>} />
     <Route path="/add-corporation" element={<AddCorporation/>} />
     <Route path="/add-videogallery" element={<AddVideoGallery/>} />
+    <Route path="/all-videogallery" element={<AllVideoGallery/>} />
     <Route path="/add-meme" element={<AddMeme/>} />
     <Route path="/all-meme" element={<AllMeme/>} />
     <Route path="/add-reels" element={<AddReels/>} />

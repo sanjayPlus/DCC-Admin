@@ -28,7 +28,6 @@ function AllVideoGallery() {
             })
             .then((userResponse) => {
               if (userResponse.status === 200) {
-            
                 setGallery(userResponse?.data);
               }
             })
@@ -102,8 +101,8 @@ function AllVideoGallery() {
                           {gallery?.map((product) => (
                             <tr key="">
                               <th>{product?.title}</th>
-                          
-                              <th>{product?.url}</th>
+
+                              <th><a href={product?.video} >Click me</a></th>
                               
 
                              
