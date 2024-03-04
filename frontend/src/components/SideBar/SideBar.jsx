@@ -1,21 +1,31 @@
 
+import { useState } from "react";
 import { Link } from "react-router-dom"
 
 function SideBar() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const handleToggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+    document.body.classList.toggle("sidebar-open", !sidebarOpen);
+  };
     return (
   
       <>
-    <nav className="sidebar">
-      <div className="sidebar-header">
-        <a href="#" className="sidebar-brand">
-         <h1>Admin</h1>
-        </a>
-        <div className="sidebar-toggler not-active">
-          <span />
-          <span />
-          <span />
+     <nav className={`sidebar ${sidebarOpen ? "sidebar-open" : ""}`}>
+        <div className="sidebar-header">
+          <a href="#" className="sidebar-brand">
+            <h1>Admin</h1>
+          </a>
+          <div
+            className={`sidebar-toggler ${sidebarOpen ? "active" : "not-active"}`}
+            onClick={handleToggleSidebar}
+          >
+            <span />
+            <span />
+            <span />
+          </div>
         </div>
-      </div>
       <div className="sidebar-body" style={{overflow:"scroll"}}>
         <ul className="nav">
           <li className="nav-item nav-category">Main</li>
