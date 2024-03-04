@@ -1,32 +1,38 @@
+import { useState } from "react";
 
 function NavBar({name,setName,link}) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  const handleToggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+    document.body.classList.toggle("sidebar-open", !sidebarOpen);
+  };
   return (
     <>
-      <nav className="navbar">
-        <a href="#" className="sidebar-toggler">
+       <nav className="navbar">
+        <p className="sidebar-toggler" onClick={handleToggleSidebar}>
           <i data-feather="menu" />
-        </a>
+        </p>
         <div className="navbar-content">
-          {link==="all-users"&&<>
-          <form className="search-form">
-
-            <div className="input-group">
-              <div className="input-group-text">
-              
-                <i data-feather="search" />
-              </div>
-              <input
-                type="text"
-                className="form-control"
-                id="navbarForm"
-                placeholder="Search here..."
-                onChange={(e)=>setName(e.target.value)}
-                value={name}
-              />
-            </div>
-          </form>
-          </>}
+          {link === "all-users" && (
+            <>
+              <form className="search-form">
+                <div className="input-group">
+                  <div className="input-group-text">
+                    <i data-feather="search" />
+                  </div>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="navbarForm"
+                    placeholder="Search here..."
+                    onChange={(e) => setName(e.target.value)}
+                    value={name}
+                  />
+                </div>
+              </form>
+            </>
+          )}
           {/* <ul className="navbar-nav">
             <li className="nav-item dropdown">
               <a

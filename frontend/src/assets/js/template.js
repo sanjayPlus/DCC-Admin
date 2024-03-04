@@ -61,18 +61,18 @@
     });
 
 
-    // Sidebar toggle to sidebar-folded
-    $('.sidebar-toggler').on('click', function(e) {
-      e.preventDefault();
-      $('.sidebar-header .sidebar-toggler').toggleClass('active not-active');
-      if (window.matchMedia('(min-width: 992px)').matches) {
-        e.preventDefault();
-        body.toggleClass('sidebar-folded');
-      } else if (window.matchMedia('(max-width: 991px)').matches) {
-        e.preventDefault();
-        body.toggleClass('sidebar-open');
-      }
-    });
+     // Sidebar toggle to sidebar-folded
+    // $('.sidebar-toggler').on('click', function(e) {
+    //   e.preventDefault();
+    //   $('.sidebar-header .sidebar-toggler').toggleClass('active not-active');
+    //   if (window.matchMedia('(min-width: 992px)').matches) {
+    //     e.preventDefault();
+    //     body.toggleClass('sidebar-folded');
+    //   } else if (window.matchMedia('(max-width: 991px)').matches) {
+    //     e.preventDefault();
+    //     body.toggleClass('sidebar-open');
+    //   }
+    // });
 
 
     // commmented because of apex chart width issue in desktop (in lg not in xl)
