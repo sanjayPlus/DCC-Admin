@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { GiHamburgerMenu } from "react-icons/gi";
 function NavBar({name,setName,link}) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -11,7 +11,7 @@ function NavBar({name,setName,link}) {
     <>
        <nav className="navbar">
         <p className="sidebar-toggler" onClick={handleToggleSidebar}>
-          <i data-feather="menu" />
+        <GiHamburgerMenu size={20} />
         </p>
         <div className="navbar-content">
           {link === "all-users" && (
