@@ -252,6 +252,12 @@ function SideBar() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link to="/social-media-category" className="nav-link">
+              <i className="link-icon" data-feather="box" />
+              <span className="link-title">Social Media Category</span>
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link to="/all-social-media" className="nav-link">
               <i className="link-icon" data-feather="box" />
               <span className="link-title">All Social Media</span>

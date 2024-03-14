@@ -46,6 +46,8 @@ import AllSocialMedia from "./components/AllSocialMedia/AllSocialMedia";
 import EditSocialMedia from "./components/EditSocialMedia/EditSocialMedia";
 import AllDeveloper from "./components/AllDeveloper/AllDeveloper";
 import AddDeveloper from "./components/AddDeveloper/AddDeveloper";
+import SocialMediaCategory from "./components/SocialMediaCategory/SocialMediaCategory";
+import AllDistrictAPI from "./components/AllDistrictAPI/AllDistrictAPI";
 
 function App() {
   return (
@@ -53,6 +55,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<DashBoard />} />
+        <Route path="/api" element={<AllDistrictAPI />} />
         <Route path="/add-user" element={<AddUser />} />
         <Route path="/all-users" element={<AllUsers />} />
         <Route path="/edit-product/:id" element={<EditProduct />} />
@@ -96,6 +99,7 @@ function App() {
         <Route path="/edit-social-media/:socialId/:itemId" element={<EditSocialMedia/>} />
         <Route path="/all-developers" element={<AllDeveloper/>} />
         <Route path="/add-developer" element={<AddDeveloper/>} />
+        <Route path="/social-media-category" element={<SocialMediaCategory/>} />
       </Routes>
       <LoadScriptOnRouteChange scriptSrc="/src/assets/js/template.js" />
       <Toaster />
