@@ -11,6 +11,7 @@ function AllSocialMedia() {
   const [gallery, setGallery] = useState([]);
   const [name, setName] = useState("");
   const [category, setCategory] = useState("AICC");
+  const [categoryList, setCategoryList] = useState([]);
 
   // const [page, setPage] = useState(1);
   useEffect(() => {
@@ -44,6 +45,17 @@ function AllSocialMedia() {
         navigate("/login");
       });
   }, [navigate]);
+  useEffect(() => {
+    axios.get(`${SERVER_URL}/admin/get-social-category`, {
+      headers: { "x-access-token": localStorage.getItem("token") },
+    }).then((res) => {
+      if (res.status === 200) {
+        setCategoryList(res?.data);
+      }
+    }).catch((err) => {
+      console.log(err);
+    })
+  })
 const handleCategoryChange = (e) => {
   setCategory(e.target.value);
   axios.get(`${SERVER_URL}/admin/get-social-media?category=${e.target.value}`, {
@@ -109,10 +121,15 @@ const handleCategoryChange = (e) => {
                           onChange={handleCategoryChange}
                         >
                           <option value="">Select Category</option>
-                          <option value="AICC">AICC</option>
-                          <option value="KPCC">KPCC</option>
-                          <option value="DCC">DCC</option>
-                          <option value="UDF">UDF</option>
+                          {categoryList?.map((category) => (
+                            <option
+                              key={category}
+                              value={category}
+                            >
+                              {category}
+                            </option>
+                            
+                          ))}
                         </select>
                       </div>
 
