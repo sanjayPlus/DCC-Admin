@@ -10,6 +10,7 @@ function AddCarousel() {
   const [carousel, setCarousel] = useState({
     name: "",
     href: "",
+    title:"",
     image: null,
   });
 
@@ -82,6 +83,7 @@ function AddCarousel() {
     const formData = new FormData();
     formData.append("name", carousel.name);
     formData.append("href", carousel.href);
+    formData.append("title", carousel.title);
     formData.append("image", carousel.image);
     const token = localStorage.getItem("token");
     axios
@@ -94,6 +96,7 @@ function AddCarousel() {
           setCarousel({
             name: "",
             href: "",
+            title: "",
             image: null,
           });
         }
@@ -146,6 +149,22 @@ function AddCarousel() {
                           onChange={handleChange}
                         />
                       </div>
+                      <div className="mb-3">
+                        <label htmlFor="carouseltitle" className="form-label">
+                          carousel title
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          id="title"
+                          autoComplete="off"
+                          placeholder="title"
+                          name="title"
+                          value={carousel.title}
+                          onChange={handleChange}
+                        />
+                      </div>
+                
                 
                       <div className="mb-3">
                         <label htmlFor="image" className="form-label">

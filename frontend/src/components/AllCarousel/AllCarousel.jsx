@@ -93,6 +93,7 @@ function AllCarousel() {
                             <th>Name</th>
                             <th>Image</th>
                             <th>Link</th>
+                            <th>Title</th>
                            
                             {/* <th>Edit</th> */}
                             <th>Delete</th>
@@ -104,6 +105,7 @@ function AllCarousel() {
                               <th>{product?.name}</th>
                               <th><img src={product?.image || "https://www.intuc.net/images/logo.jpg"} style={{width:"10%"}} alt="" /></th>
                               <th>{product?.href}</th>
+                              <th>{product?.title}</th>
                               
 
                              
