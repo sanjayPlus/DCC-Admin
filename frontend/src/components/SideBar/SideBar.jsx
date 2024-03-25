@@ -281,7 +281,30 @@ function SideBar() {
               <span className="link-title">Add Developer</span>
             </Link>
           </li>
-       
+          <li className="nav-item">
+            <Link to="/add-daily-news" className="nav-link">
+              <i className="link-icon" data-feather="box" />
+              <span className="link-title">Add Daily News</span>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/all-daily-news" className="nav-link">
+              <i className="link-icon" data-feather="box" />
+              <span className="link-title">All Daily News</span>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/add-swing" className="nav-link">
+              <i className="link-icon" data-feather="box" />
+              <span className="link-title">Add Swing</span>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/all-swings" className="nav-link">
+              <i className="link-icon" data-feather="box" />
+              <span className="link-title">All Swing</span>
+            </Link>
+          </li>
     
         </ul>
       </div>

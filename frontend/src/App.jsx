@@ -47,7 +47,11 @@ import EditSocialMedia from "./components/EditSocialMedia/EditSocialMedia";
 import AllDeveloper from "./components/AllDeveloper/AllDeveloper";
 import AddDeveloper from "./components/AddDeveloper/AddDeveloper";
 import SocialMediaCategory from "./components/SocialMediaCategory/SocialMediaCategory";
-import AllDistrictAPI from "./components/AllDistrictAPI/AllDistrictAPI";
+import AllDistrictAPI from "./components/AllDistrictAPI/AllDistrictAPI"
+import AddDailyNews from "./components/AddDailyNews/AddDailyNews";
+import AllDailyNews from "./components/AllDailyNews/AllDailyNews";
+import AddSwing from "./components/AddSwing/AddSwing";
+import AllSwings from "./components/AllSwings/AllSwings";
 
 function App() {
   return (
@@ -100,6 +104,10 @@ function App() {
         <Route path="/all-developers" element={<AllDeveloper/>} />
         <Route path="/add-developer" element={<AddDeveloper/>} />
         <Route path="/social-media-category" element={<SocialMediaCategory/>} />
+        <Route path="/add-daily-news" element={<AddDailyNews/>} />
+        <Route path="/all-daily-news" element={<AllDailyNews/>} />
+        <Route path="/add-swing" element={<AddSwing/>} />
+        <Route path="/all-swings" element={<AllSwings/>} />
       </Routes>
       <LoadScriptOnRouteChange scriptSrc="/src/assets/js/template.js" />
       <Toaster />
