@@ -8,7 +8,7 @@ import SERVER_URL from "../../config/SERVER_URL";
 
 function AllSounds() {
   const navigate = useNavigate();
-  const [gallery, setGallery] = useState([]);
+  const [sound, setSound] = useState([]);
   const [name, setName] = useState("");
   // const [page, setPage] = useState(1);
   useEffect(() => {
@@ -23,13 +23,13 @@ function AllSounds() {
       .then((res) => {
         if (res.status === 200) {
           axios
-            .get(`${SERVER_URL}/user/gallery`, {
+            .get(`${SERVER_URL}/admin/sound-cloud`, {
               headers: { "x-access-token": token },
             })
             .then((userResponse) => {
               if (userResponse.status === 200) {
             
-                setGallery(userResponse?.data);
+                setSound(userResponse?.data);
               }
             })
             .catch((err) => {
@@ -60,12 +60,12 @@ function AllSounds() {
   function handleDelete(id) {
     axios
       .delete(
-        `${SERVER_URL}/admin/deleteImage/${id}`,
+        `${SERVER_URL}/admin/delete-soundcloud/${id}`,
         { headers: { "x-access-token": localStorage.getItem("token") } }
       )
       .then((res) => {
         if (res.status === 200) {
-          setGallery(gallery?.filter((product) => product._id !== id));
+          setSound(sound?.filter((product) => product._id !== id));
         }
       })
       .catch((err) => {
@@ -78,7 +78,7 @@ function AllSounds() {
       <div className="main-wrapper">
         <SideBar />
         <div className="page-wrapper">
-          <NavBar name={name} setName={setName} link="all-gallery" />
+          <NavBar name={name} setName={setName} link="all-sounds" />
           <div className="page-content">
             <div className="row">
               <div className="col-md-12 grid-margin stretch-card">
@@ -90,20 +90,22 @@ function AllSounds() {
                       <table id="dataTableExample" className="table">
                         <thead>
                           <tr>
-                            <th>Name</th>
+                            <th>Title</th>
                             <th>Image</th>
                             <th>Description</th>
+                            <th>Url</th>
                            
                             {/* <th>Edit</th> */}
                             <th>Delete</th>
                           </tr>
                         </thead>
                         <tbody>
-                          {gallery?.map((product) => (
+                          {sound?.map((product) => (
                             <tr key="">
-                              <th>{product?.name}</th>
-                              <th><img src={product?.image || "https://www.intuc.net/images/logo.jpg"} style={{width:"10%"}} alt="" /></th>
+                              <th>{product?.title}</th>
+                              <th><img src={product?.sound || "https://www.intuc.net/images/logo.jpg"} style={{width:"10%"}} alt="" /></th>
                               <th>{product?.description}</th>
+                              <th>{product?.url}</th>
                               
 
                              

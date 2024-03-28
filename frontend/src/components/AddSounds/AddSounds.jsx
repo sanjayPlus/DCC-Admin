@@ -11,7 +11,7 @@ function AddSounds() {
     title: "",
     url:"",
     description: "",
-    image: null,
+    sound: null,
   });
 
   const navigate = useNavigate();
@@ -71,7 +71,7 @@ function AddSounds() {
     setSound(
       (prevSound) => ({
         ...prevSound,
-        image: file,
+        sound: file,
       }),
       () => {
         console.log(sound); // This will log the updated state
@@ -84,7 +84,7 @@ function AddSounds() {
     formData.append("title", sound.title);
     formData.append("url", sound.url);
     formData.append("description", sound.description);
-    formData.append("image", sound.image);
+    formData.append("sound", sound.sound);
     const token = localStorage.getItem("token");
     axios
       .post(`${SERVER_URL}/admin/sound-cloud`, formData, {
@@ -129,7 +129,7 @@ function AddSounds() {
                           id="title"
                           autoComplete="off"
                           placeholder="title"
-                          name="titke"
+                          name="title"
                           value={sound.title}
                           onChange={handleChange}
                         />
@@ -172,9 +172,9 @@ function AddSounds() {
                         <input
                           type="file"
                           className="form-control"
-                          id="image"
+                          id="sound"
                           placeholder="Upload your Sound File"
-                          name="image"
+                          name="sound"
                 
                           onChange={handleFileChange}
                         />
