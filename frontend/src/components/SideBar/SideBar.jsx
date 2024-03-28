@@ -182,11 +182,25 @@ function SideBar() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link to="/add-sounds" className="nav-link">
+              <i className="link-icon" data-feather="box" />
+              <span className="link-title">Add Sounds</span>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/all-sounds" className="nav-link">
+              <i className="link-icon" data-feather="box" />
+              <span className="link-title">All Sounds</span>
+            </Link>
+          </li>
+
+          <li className="nav-item">
             <Link to="/add-district" className="nav-link">
               <i className="link-icon" data-feather="box" />
               <span className="link-title">Add District</span>
             </Link>
           </li>
+
           <li className="nav-item">
             <Link to="/add-constituency" className="nav-link">
               <i className="link-icon" data-feather="box" />

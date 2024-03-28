@@ -52,7 +52,7 @@ import AddDailyNews from "./components/AddDailyNews/AddDailyNews";
 import AllDailyNews from "./components/AllDailyNews/AllDailyNews";
 import AddSwing from "./components/AddSwing/AddSwing";
 import AllSwings from "./components/AllSwings/AllSwings";
-
+import AddSounds from "./components/AddSounds/AddSounds";
 function App() {
   return (
     <>
@@ -108,6 +108,7 @@ function App() {
         <Route path="/all-daily-news" element={<AllDailyNews/>} />
         <Route path="/add-swing" element={<AddSwing/>} />
         <Route path="/all-swings" element={<AllSwings/>} />
+        <Route path="/add-sounds" element={<AddSounds/>} />
       </Routes>
       <LoadScriptOnRouteChange scriptSrc="/src/assets/js/template.js" />
       <Toaster />
