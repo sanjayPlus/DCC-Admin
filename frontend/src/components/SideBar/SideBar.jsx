@@ -307,7 +307,7 @@ function SideBar() {
               <span className="link-title">All Daily News</span>
             </Link>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link to="/add-swing" className="nav-link">
               <i className="link-icon" data-feather="box" />
               <span className="link-title">Add Swing</span>
@@ -318,7 +318,7 @@ function SideBar() {
               <i className="link-icon" data-feather="box" />
               <span className="link-title">All Swing</span>
             </Link>
-          </li>
+          </li> */}
     
         </ul>
       </div>
