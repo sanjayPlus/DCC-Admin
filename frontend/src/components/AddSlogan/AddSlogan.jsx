@@ -9,6 +9,7 @@ import toast from 'react-hot-toast';
 function AddSlogan() {
   const [slogan, setSlogan] = useState("");
 const [image, setImage] = useState(null);
+const [title, setTitle] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -63,6 +64,7 @@ const [image, setImage] = useState(null);
     const formData = new FormData();
     formData.append("slogan", slogan);
     formData.append("image", image);
+    formData.append("title", title);
     axios
       .post(`${SERVER_URL}/admin/slogan`,formData, {
         headers: { "x-access-token": token },
@@ -72,6 +74,7 @@ const [image, setImage] = useState(null);
           toast.success("Slogan added successfully");
           setSlogan("");
           setImage(null);
+          setTitle("");
         }
       })
       .catch((err) => {
@@ -105,6 +108,22 @@ const [image, setImage] = useState(null);
                           name="slogan"
                           value={slogan}
                           onChange={(e)=>setSlogan(e.target.value)}
+                        />
+                      </div>
+                
+                      <div className="mb-3">
+                        <label htmlFor="title" className="form-label">
+                          Title
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          id="title"
+                          autoComplete="off"
+                          placeholder="title"
+                          name="title"
+                          value={title}
+                          onChange={(e)=>setTitle(e.target.value)}
                         />
                       </div>
                 
