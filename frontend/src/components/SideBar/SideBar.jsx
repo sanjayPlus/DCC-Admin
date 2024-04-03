@@ -319,6 +319,18 @@ function SideBar() {
               <span className="link-title">All Swing</span>
             </Link>
           </li> */}
+          <li className="nav-item">
+            <Link to="/add-social-media-form" className="nav-link">
+              <i className="link-icon" data-feather="box" />
+              <span className="link-title">Add Social Media Form</span>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/all-social-media-form" className="nav-link">
+              <i className="link-icon" data-feather="box" />
+              <span className="link-title">All Social Media Form</span>
+            </Link>
+          </li>
     
         </ul>
       </div>

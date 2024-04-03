@@ -54,6 +54,8 @@ import AddSwing from "./components/AddSwing/AddSwing";
 import AllSwings from "./components/AllSwings/AllSwings";
 import AddSounds from "./components/AddSounds/AddSounds";
 import AllSounds from "./components/AllSounds/AllSounds";
+import AddSocialMediaForm from "./components/AddSocialMediaForm/AddSocialMedia";
+import AllSocialMediaForm from "./components/AllSocialMediaForm/AllSocialMediaForm";
 function App() {
   return (
     <>
@@ -111,6 +113,8 @@ function App() {
         <Route path="/all-swings" element={<AllSwings/>} />
         <Route path="/add-sounds" element={<AddSounds/>} />
         <Route path="/all-sounds" element={<AllSounds/>} />
+        <Route path="/add-social-media-form" element={<AddSocialMediaForm/>} />
+        <Route path="/all-social-media-form" element={<AllSocialMediaForm/>} />
       </Routes>
       <LoadScriptOnRouteChange scriptSrc="/src/assets/js/template.js" />
       <Toaster />
