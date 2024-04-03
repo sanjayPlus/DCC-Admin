@@ -65,7 +65,7 @@ function AllSocialMediaForm() {
             )
             .then((res) => {
                 if (res.status === 200) {
-                    setSocial(social?.filter((product: any) => product._id !== id));
+                    setSocial(social?.filter((product) => product._id !== id));
                 }
             })
             .catch((err) => {
@@ -100,7 +100,7 @@ function AllSocialMediaForm() {
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    {social.map((item: any) => (
+                                                    {social.map((item) => (
                                                         <tr key="">
                                                             <th>{item.instagram}</th>
                                                             <th>{item.facebook}</th>
