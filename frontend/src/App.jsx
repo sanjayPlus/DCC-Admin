@@ -56,6 +56,10 @@ import AddSounds from "./components/AddSounds/AddSounds";
 import AllSounds from "./components/AllSounds/AllSounds";
 import AddSocialMediaForm from "./components/AddSocialMediaForm/AddSocialMedia";
 import AllSocialMediaForm from "./components/AllSocialMediaForm/AllSocialMediaForm";
+import AddRepresentative from "./components/AddRepresentative/AddRepresentative";
+import AllRepresentative from "./components/AllRepresentative/AllRepresentative";
+import AddArticle from "./components/AddArticle/AddArticle";
+import AllArticle from "./components/AllArticle/AllArticle";
 function App() {
   return (
     <>
@@ -115,6 +119,10 @@ function App() {
         <Route path="/all-sounds" element={<AllSounds/>} />
         <Route path="/add-social-media-form" element={<AddSocialMediaForm/>} />
         <Route path="/all-social-media-form" element={<AllSocialMediaForm/>} />
+        <Route path="/add-representative" element={<AddRepresentative/>}/>
+        <Route path="/all-representative" element={<AllRepresentative/>}/>
+        <Route path="/add-article" element={<AddArticle/>}/>
+        <Route path="/all-article" element={<AllArticle/>}/>
       </Routes>
       <LoadScriptOnRouteChange scriptSrc="/src/assets/js/template.js" />
       <Toaster />
