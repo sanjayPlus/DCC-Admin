@@ -10,6 +10,7 @@ function AllSocialMedia() {
   const navigate = useNavigate();
   const [gallery, setGallery] = useState([]);
   const [name, setName] = useState("");
+  const[state, setState] = useState("");
   const [category, setCategory] = useState("AICC");
   const [categoryList, setCategoryList] = useState([]);
 
@@ -55,7 +56,7 @@ function AllSocialMedia() {
     }).catch((err) => {
       console.log(err);
     })
-  })
+  },[setState])
 const handleCategoryChange = (e) => {
   setCategory(e.target.value);
   axios.get(`${SERVER_URL}/admin/get-social-media?category=${e.target.value}`, {
